@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    font-family: sans-serif;
+}
+
+.title {
+    font-size: 22px;
+    text-align: center;
+    background-color: rgb(28, 33, 39);
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+.team-title{
+    font-size: 28px;
+    text-align: center;
+    color: white;
+    padding-bottom: 40px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px 20px;
+    background-color: rgb(28, 33, 39);
+}
+
+.names-list{
+    padding: 20px 20px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.teammate{
+    width: 165px;
+}
+
+.team-names{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+    text-align: center;
+}
+
+.left{
+    text-align: start;
+}
+
+.name{
+    font-size: 18px;
+    padding-top: 10px;
+    color: white;
+}
+
+.photo{
+    width:100px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.graph-card{
+    padding: 20px 20px;
+    background-color: rgb(28, 33, 39);
+}
+
+.graph-card > h3{
+    width: 100px;
+}
+
+.graph-card-2{
+    padding: 10px 0px;
+    background-color: rgb(28, 33, 39);
+}
+
+.slider{
+    padding-right: 200px;
+    padding-left: 20px;
+    height: 100% !important;   
+}
+
+.side{
+    display: grid;
+    grid-template-columns: 1fr 4.5fr;
+}
+
+.info-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.box{
+    padding: 20px 10px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.763);
+    color: white;
+    border: 1px solid rgb(34, 34, 34);
+
+}
+
+.chloro-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(28, 33, 39);
+}
