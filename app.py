@@ -3,8 +3,6 @@ import pandas as pd
 import plotly.express as px  # (version 4.7.0 or higher)
 import plotly.graph_objects as go
 from dash import Dash, dcc, html, Input, Output  # pip install dash (version 2.0.0 or higher)
-import matplotlib.pyplot as plt
-import plotly.io as pio
 
 app = Dash(__name__)
 
@@ -139,11 +137,26 @@ app.layout = html.Div(
             ),
 
     html.Div(
-                className="graph-card",
+        className="grid",
+        children=[
+            html.Div(
+                className="graph-card-2",
                 children=[
                     dcc.Graph(id='graph_6', figure={})
                 ]
             ),
+
+            html.Div(
+                className="graph-card-2",
+                children=[
+                    dcc.Graph(id='graph_7', figure={})
+                ]
+            ),
+            
+        ]
+    ),
+
+    
 
     html.Div(
                 className="names-list",
@@ -236,6 +249,7 @@ app.layout = html.Div(
         Output(component_id='graph_4', component_property='figure'),
         Output(component_id='graph_5', component_property='figure'),
         Output(component_id='graph_6', component_property='figure'),
+        Output(component_id='graph_7', component_property='figure'),
     ],
     Input(component_id='slct_year', component_property='value')
 )
@@ -323,7 +337,12 @@ def update_graph(option_slctd):
 
     #----------------------------------------------------------------------------------------------------------------------------------------
 
-    return style, dtot, maxState, minState, fig, fig2, fig3, fig4, fig5, fig6
+    d1=data[["Year","Area_Name","Cases_Reported","Cases_Convicted","Total_Cases_for_Trial","Cases_Compounded_or_Withdrawn"]]
+    fig7 =  px.imshow(d1.corr(), template="plotly_dark", title="Correlation between all variables", color_continuous_scale='YlOrBr')
+    
+    #----------------------------------------------------------------------------------------------------------------------------------------
+
+    return style, dtot, maxState, minState, fig, fig2, fig3, fig4, fig5, fig6, fig7
 
 
 # ------------------------------------------------------------------------------
