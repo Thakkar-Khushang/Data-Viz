@@ -227,7 +227,7 @@ app.layout = html.Div(
                             ),
                         ]
                     ),
-                    html.H4("Made with ❤️", style={"text-align": "center", "color": "white","padding-top": "50px"}),
+                    html.H4("Made with 📈", style={"text-align": "center", "color": "white","padding-top": "50px"}),
                 ]
             ),
     
@@ -347,4 +347,4 @@ def update_graph(option_slctd):
 
 # ------------------------------------------------------------------------------
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server()
